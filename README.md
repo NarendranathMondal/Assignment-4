@@ -1,11 +1,13 @@
 # Task 1
-try:
-    with open("sample.txt", "r") as file:
-        print("Reading file content:")
-        for index, line in enumerate(file, start=1):
-            print(f"Line {index}: {line.strip()}")
-except FileNotFoundError:
-    print("Error: The file 'sample.txt' was not found.")
+def read_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            print("Reading file content:")
+            for i, line in enumerate(file, start=1):
+                print(f"Line {i}: {line.strip()}")
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' was not found.")
+read_file("sample.txt")
 
-  # Task 2
+# Task 2
     
